@@ -25,6 +25,9 @@ we were well fed and drunk all the time!</p>
           <li><a href="#"><%= image_tag 'c-liogo3.png' %></a></li>
           <li><a href="#"><%= image_tag 'c-liogo4.png' %></a></li>
           <li><a href="#"><%= image_tag 'c-liogo5.png' %></a></li>
+					<% @clientes.each do |cliente| %>
+						<li><a href="#"><%= image_tag cliente.logo %></a></li>
+					<% end %>
     	</ul>
 	</div>
 </div><!--c-logo-part-end-->
