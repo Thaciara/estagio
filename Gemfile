@@ -43,3 +43,5 @@ gem 'scrollToFixed_rails'
 gem 'jquery-easing-rails'
 gem 'masonry-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
+
+gem 'rails_12factor', group: :production
