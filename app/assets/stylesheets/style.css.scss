@@ -101,7 +101,7 @@ p{
 	padding:280px 0;
 }
 .logo{
-	width:130px;
+	width:265px;
 	margin:0 auto 35px;
 }
 .header h1{
@@ -210,6 +210,10 @@ color: #fff;
 
 .small-logo{
 	padding:0 32px;
+}
+
+li.small-logo a img {
+	max-width: 36px;
 }
 
 .main-section{
