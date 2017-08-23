@@ -12,10 +12,11 @@
 //
 //= require jquery
 //= require tether
-//= require scrolltofixed
-//= require jquery.easing
-//= require isotope/jquery.isotope
+// require scrolltofixed
+// require jquery.easing
+// require isotope/jquery.isotope
 //= require rails-ujs
 //= require turbolinks
+//= require popper
 //= require bootstrap-sprockets
 //= require_tree .
