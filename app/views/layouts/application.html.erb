@@ -11,15 +11,14 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <!-- <header>
-      <= render 'layouts/navigation' %>
+    <%= render 'layouts/header' %>
+    <header>
+      <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-       <= render 'layouts/messages' %>
-       <= yield %>
-    </main> -->
-    <%= render 'layouts/header' %>
-    <%= yield %>
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
     <%= render 'layouts/footer' %>
 
   </body>
