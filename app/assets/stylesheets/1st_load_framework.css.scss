@@ -3,3 +3,19 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+div.carousel-inner .carousel-item {
+    background-color: #ccc;
+}
+
+div.carousel-inner .carousel-item .carousel-caption {
+  color: #444;
+}
+
+div.carousel-inner .carousel-item img {
+  padding: 15px;
+}
+
+div.carousel-inner .carousel-item:nth-child(1) {
+  // background-image: image-url('produtos/notebook-acer.gif');
+}
