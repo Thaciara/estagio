@@ -49,3 +49,5 @@ gem 'rails_12factor', group: :production
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'remotipart', '~> 1.2'
+
+gem 'pry'

@@ -4,7 +4,9 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    # @products = Product.all unless params[:name_contains].present?
+    # @products = []
+    @products = Product.filter(params.slice(:name_contains))
   end
 
   # GET /products/1
@@ -30,7 +32,6 @@ class ProductsController < ApplicationController
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
-        format.js
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -71,5 +72,9 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:name, :description, :image, :active)
+    end
+
+    def filtering_params(params)
+      params.slice(:name)
     end
 end
