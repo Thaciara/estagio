@@ -1,75 +1,59 @@
 <div class="container">
 
-  <h1 class="mt-4 mb-3">Quem Somos</h1>
-  <br>
+  <div class="card border-dark mt-4 mb-3">
 
-  <!-- Intro Content -->
-  <div class="row">
-    <div class="col-lg-6">
-      <img class="img-fluid rounded mb-4" src='sobre.jpg'>
+    <div class="card-header">
+      <h4>Quem Somos</h4>
     </div>
-    <div class="col-lg-6">
 
-      <p> Fundada em 2017 pelos irmãos Maicon e William Deon, a Deonline Soluções em Informática, situada no município de Fraiburgo, é uma empresa do ramo de Tecnologia da Informação, a qual promove as mais qualificadas soluções para o amplo mercado tecnológico, prestando serviços e vendendo produtos de informática.</p>
-      <p> Espírito empreendedor é a marca registrada da família Deon, que já atende Fraiburgo e Região em outros ramos de atividades, e, para dar continuidade no empreendedorismo familiar os irmãos resolveram unir o conhecimento de Maicon na área tecnologica e o de William na área administrativa surgindo assim a Deonline Soluções em Informática.</p>
-      <p> Apostam em diferenciais e qualidade nos serviços prestados para conquistar o mercado, atendendo em horários diferenciados inclusive aos finais de semana, possibilitam a locação de equipamentos e se comprometem com a clientela de sempre manter seu portfólio atualizado seja em conhecimento, produtos e serviços prestados.</p>
+    <div class="card-body">
+
+      <div class="card-group">
+        <div class="card border-light">
+          <p>Fundada em 2017 pelos irmãos Maicon e William Deon, a Deonline Soluções em Informática, situada no município de Fraiburgo, é uma empresa do ramo de Tecnologia da Informação, a qual promove as mais qualificadas soluções para o amplo mercado tecnológico, prestando serviços e vendendo produtos de informática.</p>
+          <p>Espírito empreendedor é a marca registrada da família Deon, que já atende Fraiburgo e Região em outros ramos de atividades, e, para dar continuidade no empreendedorismo familiar os irmãos resolveram unir o conhecimento de Maicon na área tecnologica e o de William na área administrativa surgindo assim a Deonline Soluções em Informática.</p>
+          <p>Apostam em diferenciais e qualidade nos serviços prestados para conquistar o mercado, atendendo em horários diferenciados inclusive aos finais de semana, possibilitam a locação de equipamentos e se comprometem com a clientela de sempre manter seu portfólio atualizado seja em conhecimento, produtos e serviços prestados.</p>
+        </div>
+      </div>
 
     </div>
+
   </div>
-  <!-- /.row -->
 
   <!-- Team Members -->
-  <h2>Nossa Equipe</h2>
+  <div class="card border-dark mt-4 mb-3">
 
-  <div class="row">
-    <div class="col-lg-4 mb-4">
-      <div class="card h-100 text-center">
-        <img class="card-img-top"  src="/images/team-leader-pic2.jpg" width=700 height=400>
-        <div class="card-body">
-          <h4 class="card-title">Maicon Deon</h4>
-          <h6 class="card-subtitle mb-2 text-muted">Sócio Administrador<br>Analista de Hardware e Graduando em Administração de Empresas</h6>
-          
-        </div>
-        
-      </div>
+    <div class="card-header">
+      <h4>Nossa Equipe</h4>
     </div>
-    <div class="col-lg-4 mb-4">
-      <div class="card h-100 text-center">
-        <img class="card-img-top" src="/images/team-leader-pic2.jpgteam-leader-pic2.jpg" width=700 height=400" >
-        <div class="card-body">
-          <h4 class="card-title">William Deon</h4>
-          <h6 class="card-subtitle mb-2 text-muted">Sócio Gerente</h6>
-        </div>
-      </div>
-    </div>
-      </div>
-       <img src="images/sobre/mvv.png" alt="" style="max-width: 100%;">
 
-                       
-<div class="inner_about_title">
-   <h2>Missão</h2>
-    <p>Fornecer soluções inovadoras para pessoas Fí­sicas e Jurí­dicas na área de TI, sempre com excelência na qualidade dos produtos e serviços prestados, comprometendo-se em auxiliar na resolução das necessidades dos clientes, superando suas expectativas.</p><br><br>
-   </div>
-   <div class="video_title">
-    <h2>Visão</h2>
-  <p>Ser reconhecida e valorizada no mercado tecnológico sendo uma referência nas áreas de atuação com nossos produtos e serviços oferecidos, nos tornando fonte admirável e inspiradora tanto para clientes quanto colaboradores.</p><br><br>
-   </div>
-    <div class="section_title wow fadeIn" data-wow-duration="1s">
-    <h2>Valores</h2>
-    <h3>1 - As Pessoas em Primeiro Lugar <span></span></h3>
-   <p> Valorização dos nossos Clientes, Fornecedores e Colaboradores;</p>
-   <h3>2 - Ética<span></span></h3>
-    <p>Comprometimento com os princípios éticos Sociais, Governamentais e Ambientais;</p>
-    <h3>3 - Profissionalismo e Honestidade<span></span></h3>
-   <p>Atuar com profissionalismo, honestidade, transparência e responsabilidade;</p>
-   <h3><span></span>4 - Simplicidade </h3>
-   <p>Simplicidade (atuar de forma prática e objetiva;</p>
-    <h3><span></span>5 - Excelência</h3>
-   <p>Paixão por fazer sempre o melhor, aprender com os erros e valorizar os acertos, estimular a inovação e continuar com a superação.</p>
-   <h3><span></span>6 - Dedicação</h3>
-   <p>Sempre focados em melhor atender o seu cliente, dedicamos todos os esforços para melhor atender o seu cliente.</p><br>
+    <div class="card-body">
+
+      <div class="card-group">
+        <div class="card border-light text-center">
+          <div class="card-body">
+            <%= image_tag 'team-leader-pic1.jpg', class: 'rounded', height: 250 %>
+            <div class="rank-label-container">
+              <span class="label label-default rank-label">Maicon Deon</span>
+            </div>
+            <hr>
+            <h6 class="text-muted">Sócio Administrador<br>Analista de Hardware e Graduando em Administração de Empresas</h6>
+          </div>
+        </div>
+        <div class="card border-light text-center">
+          <div class="card-body">
+            <%= image_tag 'team-leader-pic2.jpg', class: 'rounded', height: 250 %>
+            <div class="rank-label-container">
+              <span class="label label-default rank-label">William Deon</span>
+            </div>
+            <hr>
+            <h6 class="text-muted">Socio Gerente</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  </div>
-  </div>
-  <!-- /.row -->
+
 </div>
