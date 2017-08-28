@@ -1,4 +1,4 @@
-<%= form_with(model: product, local: true) do |form| %>
+<%= form_with(model: product, remote: true, multipart: true) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -23,13 +23,14 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_field :image, id: :product_image %>
+    <%= form.file_field :image, id: :product_image %>
   </div>
 
   <div class="field">
     <%= form.label :active %>
     <%= form.check_box :active, id: :product_active %>
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
