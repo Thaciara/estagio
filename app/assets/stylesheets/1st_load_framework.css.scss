@@ -1,28 +1,6 @@
-// import the CSS framework
-// Do not use *= require in Sass or your other stylesheets will not be able to access the Bootstrap mixins and variables.
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
-// div.carousel.slide {
-//   background-image: image-url('produtos/main-bg.jpg');
-// }
-
-// span.carousel-control-next-icon {
-//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' stroke='grey' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-// }
-//
-// span.carousel-control-prev-icon {
-//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' stroke='grey' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
-// }
-
-// div.carousel-inner .carousel-item .carousel-caption {
-//   color: #444;
-// }
-//
-// div.carousel-inner .carousel-item img {
-//   padding: 15px;
-// }
 
 div.carousel-inner .carousel-item:nth-child(1) {
   background-image: image-url('produtos/banner1.jpg');
