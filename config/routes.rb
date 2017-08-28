@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   resources :clientes
 
   get 'favoritos' => 'clientes#listar_clientes_favoritos'
