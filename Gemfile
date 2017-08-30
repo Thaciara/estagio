@@ -55,4 +55,6 @@ gem 'remotipart', '~> 1.2' #UPLOAD COM AJAX
 
 gem 'kaminari' #PAGINAÇÂO
 gem "breadcrumbs_on_rails" #BREADCRUMBS
-gem "wysiwyg-rails" #HTML EDITOR
+# gem "wysiwyg-rails" #HTML EDITOR
+gem 'tinymce-rails' #HTML EDITOR
+gem 'tinymce-rails-langs' #HTML EDITOR
