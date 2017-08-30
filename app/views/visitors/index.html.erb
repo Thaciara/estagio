@@ -2,52 +2,56 @@
 
   <div class="container">
 
-    <!--Carousel Wrapper-->
-    <div id="multi-item-example" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
+    <% if !@produtos.empty? %>
 
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
+      <!--Carousel Wrapper-->
+      <div id="multi-item-example" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
 
-          <% active_class = 'active' %>
-          <% @produtos.in_groups_of(3, false).each do |itens| %>
+          <!--Slides-->
+          <div class="carousel-inner" role="listbox">
 
-            <div class="carousel-item <%= active_class %>">
-              <% active_class = '' %>
+            <% active_class = 'active' %>
+            <% @produtos.in_groups_of(3, false).each do |itens| %>
 
-              <% itens.each do |item| %>
-                <div class="col-md-4 clearfix d-none d-md-block">
-                    <div class="card bg-info text-white">
-                      <div class="card-header text-md-center" style="height: 80px;">
-                        <h6 class="card-title"><%= item.name %></h6>
+              <div class="carousel-item <%= active_class %>">
+                <% active_class = '' %>
+
+                <% itens.each do |item| %>
+                  <div class="col-md-4 clearfix d-none d-md-block">
+                      <div class="card bg-info text-white">
+                        <div class="card-header text-md-center" style="height: 80px;">
+                          <h6 class="card-title"><%= item.name %></h6>
+                        </div>
+                        <div class="card-body">
+                          <%= link_to item do %>
+                            <%= image_tag item.image.url(:medium), class: 'img-thumbnail img-fluid' %>
+                          <% end %>
+                        </div>
+                        <div class="card-footer text-center bg-dark">
+                          <%= link_to item, class: 'text-white' do %>
+                            <i class="fa fa-plus"></i>
+                            Mais informações
+                          <% end %>
+                        </div>
                       </div>
-                      <div class="card-body">
-                        <%= link_to item do %>
-                          <%= image_tag item.image.url(:medium), class: 'img-thumbnail img-fluid' %>
-                        <% end %>
-                      </div>
-                      <div class="card-footer text-center bg-dark">
-                        <%= link_to item, class: 'text-white' do %>
-                          <i class="fa fa-plus"></i>
-                          Mais informações
-                        <% end %>
-                      </div>
-                    </div>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
 
-        <!--/.Slides-->
-        <!--Controls-->
-        <div class="controls-top mt-3">
-            <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-            <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-        </div>
-        <!--/.Controls-->
+          <!--/.Slides-->
+          <!--Controls-->
+          <div class="controls-top mt-3">
+              <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+              <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+          </div>
+          <!--/.Controls-->
+
+      </div>
+      <!--/.Carousel Wrapper-->
 
     </div>
-    <!--/.Carousel Wrapper-->
 
-  </div>
+  <% end %>
 </div>
