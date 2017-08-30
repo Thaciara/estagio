@@ -1,3 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  $('textarea').froalaEditor();
+  $('textarea').froalaEditor({
+    heightMin: '200px',
+  });
 });
