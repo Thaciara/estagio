@@ -1,18 +1,19 @@
+---
 development:
-  cloud_name: dnyov3ak4
-  api_key: '699184988394877'
-  api_secret: TImZToasGkL0byOXpqQIy6KstSo
+  cloud_name: dxgiuxvya
+  api_key: '456459468585972'
+  api_secret: hvpPDpuDSb0-g3fTNC4YF7TjvEk
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: dnyov3ak4
-  api_key: '699184988394877'
-  api_secret: TImZToasGkL0byOXpqQIy6KstSo
+  cloud_name: dxgiuxvya
+  api_key: '456459468585972'
+  api_secret: hvpPDpuDSb0-g3fTNC4YF7TjvEk
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: dnyov3ak4
-  api_key: '699184988394877'
-  api_secret: TImZToasGkL0byOXpqQIy6KstSo
+  cloud_name: dxgiuxvya
+  api_key: '456459468585972'
+  api_secret: hvpPDpuDSb0-g3fTNC4YF7TjvEk
   enhance_image_tag: true
   static_image_support: false
