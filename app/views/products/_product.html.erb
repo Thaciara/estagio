@@ -1,6 +1,9 @@
 <div class="card border-dark">
   <div class="card-header">
-    <h4 class="card-title">Produto #<%= @product.id %></h4>
+    <h4 class="card-title">
+      Produto #<%= @product.id %>
+      <small class="pull-right"><%= link_to 'Voltar', :back %></small>
+    </h4>
   </div>
   <div class="card-body">
     <div class="row">
@@ -12,9 +15,6 @@
           </div>
           <div class="card-body">
             <%= image_tag(@product.image.url(:medium), class: 'rounded img-fluid') %>
-          </div>
-          <div class="card-footer text-center">
-            <%= status %>
           </div>
         </div>
       </div>

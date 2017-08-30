@@ -20,4 +20,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require jquery.remotipart
+//= require froala_editor.min.js
 //= require_tree .

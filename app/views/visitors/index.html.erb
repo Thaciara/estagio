@@ -1,41 +1,53 @@
-<div class="container">
-  <h1></h1>
+<div class="bg-info pt-3">
 
-  <!-- Marketing Icons Section -->
-  <div class="row">
-    <div class="col-lg-4 mb-4">
-      <div class="card h-100">
-        <h4 class="card-header">Card Title</h4>
-        <div class="card-body">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+  <div class="container">
+
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+          <% active_class = 'active' %>
+          <% @produtos.in_groups_of(3, false).each do |itens| %>
+
+            <div class="carousel-item <%= active_class %>">
+              <% active_class = '' %>
+
+              <% itens.each do |item| %>
+                <div class="col-md-4 clearfix d-none d-md-block">
+                    <div class="card bg-info text-white">
+                      <div class="card-header text-md-center" style="height: 80px;">
+                        <h6 class="card-title"><%= item.name %></h6>
+                      </div>
+                      <div class="card-body">
+                        <%= link_to item do %>
+                          <%= image_tag item.image.url(:medium), class: 'img-thumbnail img-fluid' %>
+                        <% end %>
+                      </div>
+                      <div class="card-footer text-center bg-dark">
+                        <%= link_to item, class: 'text-white' do %>
+                          <i class="fa fa-plus"></i>
+                          Mais informações
+                        <% end %>
+                      </div>
+                    </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
-        <div class="card-footer">
-          <a href="#" class="btn btn-primary">Learn More</a>
+
+        <!--/.Slides-->
+        <!--Controls-->
+        <div class="controls-top mt-3">
+            <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+            <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
         </div>
-      </div>
+        <!--/.Controls-->
+
     </div>
-    <div class="col-lg-4 mb-4">
-      <div class="card h-100">
-        <h4 class="card-header">Card Title</h4>
-        <div class="card-body">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-        </div>
-        <div class="card-footer">
-          <a href="#" class="btn btn-primary">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-      <div class="card h-100">
-        <h4 class="card-header">Card Title</h4>
-        <div class="card-body">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-        </div>
-        <div class="card-footer">
-          <a href="#" class="btn btn-primary">Learn More</a>
-        </div>
-      </div>
-    </div>
+    <!--/.Carousel Wrapper-->
+
   </div>
-  <!-- /.row -->
 </div>

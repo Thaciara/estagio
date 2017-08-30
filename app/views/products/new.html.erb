@@ -1,5 +1,15 @@
-<h1>New Product</h1>
-
-<%= render 'form', product: @product %>
-
-<%= link_to 'Back', products_path %>
+<div class="container mt-3">
+  <div class="card border-dark">
+    <div class="card-header">
+      <h4 class="card-title">
+        Novo produto
+      </h4>
+    </div>
+    <div class="card-body">
+      <%= render 'form', product: @product %>
+    </div>
+    <div class="card-footer">
+      <%= link_to 'Voltar', products_path %>
+    </div>
+  </div>
+</div>

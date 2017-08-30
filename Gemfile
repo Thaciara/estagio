@@ -45,10 +45,14 @@ gem 'masonry-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
 
 gem 'rails_12factor', group: :production
-gem 'pry'
 
-gem 'carrierwave'
-gem 'cloudinary'
-gem 'remotipart', '~> 1.2'
+# Adicionadas pelo desenvolvedor
+gem 'pry' #DEBUG
 
-gem 'kaminari'
+gem 'carrierwave' #UPLOAD
+gem 'cloudinary' #SERVIDOR PARA UPLOAD DE ARQUIVOS
+gem 'remotipart', '~> 1.2' #UPLOAD COM AJAX
+
+gem 'kaminari' #PAGINAÇÂO
+gem "breadcrumbs_on_rails" #BREADCRUMBS
+gem "wysiwyg-rails" #HTML EDITOR

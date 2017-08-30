@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  add_breadcrumb "Produtos", :products_path
+  add_breadcrumb "<i class='fa fa-plus'></i> Novo".html_safe, :new_product_path, only: [:index, :new]
+
   # GET /products
   # GET /products.json
   def index
@@ -21,6 +24,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    add_breadcrumb "Detalhes", @product
   end
 
   # POST /products
@@ -71,7 +75,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :image, :active)
+      params.require(:product).permit(:name, :description, :image, :active, :idprincipal)
     end
 
     def filtering_params(params)

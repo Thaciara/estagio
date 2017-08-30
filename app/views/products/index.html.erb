@@ -29,7 +29,9 @@
                 <tr>
                   <td><%= product.name %></td>
                   <td class="text-center"><%= image_tag product.image.url(:icon) %></td>
-                  <td class="text-center"><%= status %></td>
+                  <td class="text-center">
+                    <%= product.active? ? content_tag(:i, '',  class: 'fa fa-2x fa-check') : content_tag(:i, '', class: 'fa fa-2x fa-close') %>
+                  </td>
                   <td class="text-center"><%= link_to 'Detalhes', product %></td>
                   <td class="text-center"><%= link_to 'Editar', edit_product_path(product) %></td>
                   <td class="text-center"><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
