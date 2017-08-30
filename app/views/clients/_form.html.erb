@@ -1,7 +1,8 @@
 <%= form_with(model: client, local: true, multipart: true ) do |form| %>
+
   <% if client.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+      <h2><%= pluralize(client.errors.count, "error") %> impediram que o produto fosse salvo:</h2>
 
       <ul>
       <% client.errors.full_messages.each do |message| %>
@@ -11,14 +12,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :client_name %>
+    <%= form.text_field :name, id: :client_name, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :logo %>
-   <%= form.file_field :logo, id: :client_logo %>
+   <%= form.file_field :logo, id: :client_logo, class: 'form-control'  %>
   </div>
 
   <div class="actions">

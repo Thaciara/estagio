@@ -1,6 +1,18 @@
-<h1>Editing Client</h1>
+<div class="container mt-3">
+  <div class="card border-dark">
+    <div class="card-header">
+      <h4 class="card-title">
+        Alterando o cliente
+      </h4>
+    </div>
+    <div class="card-body">
 
 <%= render 'form', client: @client %>
+</div>
+    <div class="card-footer">
+<%= link_to 'Detalhes', @client %> 
+<%= link_to 'Voltar', clients_path %>
+</div>
+  </div>
+</div>
 
-<%= link_to 'Show', @client %> |
-<%= link_to 'Back', clients_path %>

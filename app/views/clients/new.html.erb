@@ -1,5 +1,15 @@
-<h1>New Client</h1>
-
-<%= render 'form', client: @client %>
-
-<%= link_to 'Back', clients_path %>
+<div class="container mt-3">
+  <div class="card border-dark">
+    <div class="card-header">
+      <h4 class="card-title">
+        Novo cliente
+      </h4>
+    </div>
+    <div class="card-body">
+      <%= render 'form', client: @client%>
+    </div>
+    <div class="card-footer">
+      <%= link_to 'Voltar', clients_path %>
+    </div>
+  </div>
+</div>
