@@ -20,19 +20,15 @@
               <tr>
                 <th>Nome</th>
                 <th class="text-center">Imagem</th>
-                <th class="text-center">Ativo</th>
                 <th colspan="3" class="text-center">Ações</th>
               </tr>
             </thead>
             <tbody>
               <% @clients.each do |client| %>
                 <tr>
-                  <td><%= cliente.name %></td>
+                  <td><%= client.name %></td>
                   <td class="text-center"><%= image_tag client.logo.url(:icon) %></td>
-                  <td class="text-center">
-                    <%= client.active? ? content_tag(:i, '',  class: 'fa fa-2x fa-check') : content_tag(:i, '', class: 'fa fa-2x fa-close') %>
-                  </td>
-                  <td class="text-center"><%= link_to 'Detalhes', cliente %></td>
+                  <td class="text-center"><%= link_to 'Detalhes', client %></td>
                   <td class="text-center"><%= link_to 'Editar', edit_client_path(client) %></td>
                   <td class="text-center"><%= link_to 'Excluir', client, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
                 </tr>
