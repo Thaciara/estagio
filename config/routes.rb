@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :produtos
+=======
+  resources :products
+>>>>>>> b075287da67bdac779f7f237526fb4edc7c4d1cb
   resources :clientes
 
   get 'favoritos' => 'clientes#listar_clientes_favoritos'

@@ -1,7 +1,53 @@
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; 2017. Todos os direitos reservados</p>
-  </div>
-  <!-- /.container -->
+<footer class="footer-distributed bg-dark mt-3">
+
+	<div class="footer-left">
+
+		<h3><span><%= image_tag 'small-logo', height: 45 %></span></h3>
+
+		<p class="footer-links">
+      <%= link_to 'Inicio', root_path %> |
+      <%= link_to 'Sobre', page_path('sobre') %> |
+      <%= link_to 'Serviços', page_path('servico') %> |
+      <%= link_to 'Contato', page_path('contato') %>
+		</p>
+
+		<p class="footer-company-name">Copyright &copy; 2017. Todos os direitos reservados</p>
+	</div>
+
+	<div class="footer-center">
+
+		<!-- <div>
+			<i class="fa fa-map-marker"></i>
+			<p><span>21 Revolution Street</span> Paris, France</p>
+		</div> -->
+
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>(49) 3246-2961</p>
+		</div>
+
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p><a href="mailto:support@company.com">contato@deonline.net.br</a></p>
+		</div>
+
+	</div>
+
+	<div class="footer-right">
+
+		<p class="footer-company-about">
+      Prestação de serviços e venda de produtos de informática
+		</p>
+
+		<div class="footer-icons">
+
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-linkedin"></i></a>
+			<a href="#"><i class="fa fa-github"></i></a>
+
+		</div>
+
+	</div>
+
 </footer>

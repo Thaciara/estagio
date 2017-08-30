@@ -11,15 +11,20 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+<<<<<<< HEAD
    
+=======
+>>>>>>> b075287da67bdac779f7f237526fb4edc7c4d1cb
     <header>
       <%= render 'layouts/navigation' %>
+      <%= render 'layouts/header' if current_page?(root_path) %>
     </header>
-    <main role="main">
+
+    <main role="main" class="mt-3 mb-3">
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
-    <%= render 'layouts/footer' %>
 
+    <%= render 'layouts/footer' %>
   </body>
 </html>

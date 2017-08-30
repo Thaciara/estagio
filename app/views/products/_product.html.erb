@@ -1,0 +1,41 @@
+<div class="card border-dark">
+  <div class="card-header">
+    <h4 class="card-title">Produto #<%= @product.id %></h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card border-dark">
+          <div class="card-header">
+            <strong><%= @product.name %></strong>
+          </div>
+          <div class="card-body">
+            <%= image_tag(@product.image.url(:medium), class: 'rounded img-fluid') %>
+          </div>
+          <div class="card-footer text-center">
+            <%= status %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="card border-dark">
+          <div class="card-header">
+            <strong>Detalhes:</strong>
+          </div>
+          <div class="card-body">
+            <%= @product.description.html_safe %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Alterar', edit_product_path(@product) %> |
+    <%= link_to 'Listar', products_path %>
+  </div>
+</div>

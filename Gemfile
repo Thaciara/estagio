@@ -45,3 +45,10 @@ gem 'masonry-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
 
 gem 'rails_12factor', group: :production
+gem 'pry'
+
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'remotipart', '~> 1.2'
+
+gem 'kaminari'

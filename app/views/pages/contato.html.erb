@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div class="card border-dark mt-4 mb-3">
+  <div class="card border border-info text-white bg-dark mt-4">
 
     <div class="card-header">
       <h4>Contato</h4>
@@ -37,7 +37,7 @@
 
   </div>
 
-  <div class="card border-dark mt-4 mb-3">
+  <div class="card border border-info text-white bg-dark mt-4">
 
     <div class="card-header">
       <h4>Envie-nos uma mensagem</h4>
@@ -48,27 +48,27 @@
       <form name="sentMessage" id="contactForm" novalidate>
         <div class="control-group form-group">
           <div class="controls">
-            <label>Seu Nome:</label>
-            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+            <label>Seu Nome *:</label>
+            <input type="text" class="form-control" id="name" required data-validation-required-message="Informe seu nome.">
             <p class="help-block"></p>
           </div>
         </div>
         <div class="control-group form-group">
           <div class="controls">
+            <label>Seu Email *:</label>
+            <input type="email" class="form-control" id="email" required data-validation-required-message="Informe seu e-mail.">
+          </div>
+        </div>
+        <div class="control-group form-group">
+          <div class="controls">
             <label>Número do Telefone:</label>
-            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+            <input type="tel" class="form-control" id="phone">
           </div>
         </div>
         <div class="control-group form-group">
           <div class="controls">
-            <label>Seu Email:</label>
-            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-          </div>
-        </div>
-        <div class="control-group form-group">
-          <div class="controls">
-            <label>Mensagem:</label>
-            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+            <label>Mensagem *:</label>
+            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Informe sua mensagem." maxlength="999" style="resize:none"></textarea>
           </div>
         </div>
         <div id="success"></div>
