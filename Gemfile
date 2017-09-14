@@ -21,7 +21,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'devise'
+
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.beta'
@@ -59,3 +59,4 @@ gem "breadcrumbs_on_rails" #BREADCRUMBS
 # gem "wysiwyg-rails" #HTML EDITOR
 gem 'tinymce-rails' #HTML EDITOR
 gem 'tinymce-rails-langs' #HTML EDITOR
+gem 'devise'

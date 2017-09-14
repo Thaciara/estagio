@@ -4,6 +4,8 @@ class ProductsController < ApplicationController
   add_breadcrumb "Produtos", :products_path
   add_breadcrumb "<i class='fa fa-plus'></i> Novo".html_safe, :new_product_path, only: [:index, :new]
 
+  before_action :authenticate_user!, except: [:show]
+
   # GET /products
   # GET /products.json
   def index
