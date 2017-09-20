@@ -1,0 +1,30 @@
+<div class="card border-dark">
+  <div class="card-header">
+    <h4 class="card-title">
+      Cliente #<%= @client.id %>
+      <small class="pull-right"><%= link_to 'Voltar', :back %></small>
+    </h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card border-dark">
+          <div class="card-header">
+            <strong><%= @client.name %></strong>
+          </div>
+          <div class="card-body">
+            <%= image_tag(@client.logo.url, class: 'rounded img-fluid') %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Alterar', edit_client_path(@client) %> |
+    <%= link_to 'Listar', clients_path %>
+  </div>
+</div>
