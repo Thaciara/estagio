@@ -17,7 +17,9 @@
       <%= render 'layouts/header' if current_page?(root_path) %>
     </header>
 
-    <main role="main" class="mt-3 mb-3">
+    <% main_class = current_page?(root_url) ? '' : 'mt-3 mb-3' %>
+
+    <main role="main" class="<%= main_class %>">
        <div class="container">
          <% unless current_page?(root_url) %>
            <div class="alert alert-secundary border border-dark" role="alert">

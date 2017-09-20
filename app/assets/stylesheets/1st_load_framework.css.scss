@@ -30,7 +30,7 @@ header .carousel .carousel-inner .carousel-item:nth-child(3) {
 	font: bold 16px sans-serif;
 
 	padding: 55px 50px;
-	margin-top: 80px;
+	// margin-top: 80px;
 }
 
 .footer-distributed .footer-left,
@@ -455,7 +455,7 @@ header .carousel .carousel-inner .carousel-item:nth-child(3) {
 }
 
 .carousel-multi-item .controls-top {
-    margin-bottom: 30px
+    // margin-bottom: 30px
 }
 
 .carousel-multi-item .controls-top .btn-floating {
@@ -525,7 +525,7 @@ header .carousel .carousel-inner .carousel-item:nth-child(3) {
 
 
 .carousel-multi-item .controls-top {
-    margin-bottom: 30px
+    // margin-bottom: 30px
 }
 
 .carousel-multi-item .controls-top .btn-floating {
@@ -610,4 +610,12 @@ header .carousel .carousel-inner .carousel-item:nth-child(3) {
 .btn-floating.btn-lg i {
     font-size: 1.625rem;
     line-height: 61.1px
+}
+
+div#clientes-bg {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%), image-url('bg-clientes.jpg');
+}
+
+div#produtos-bg, footer.footer-distributed, header > nav.navbar {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%), image-url('bg-produtos.jpg');
 }

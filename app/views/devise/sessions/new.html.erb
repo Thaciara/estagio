@@ -1,12 +1,8 @@
 <div class="container">
-  
-  <div class="col-md-5">
-
-    <div class="card">
-    
+  <div class="card">
     <h3 class="card-header">Entrar</h3>
 
-      <div class="card-body">  
+      <div class="card-body">
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group">
@@ -26,8 +22,8 @@
             </div>
           <% end -%>
 
-          <div class="actions">
-            <%= f.submit "Entrar" %>
+          <div class="form-group">
+            <%= f.submit "Entrar", class: 'btn btn-primary' %>
           </div>
         <% end %>
 
@@ -36,8 +32,6 @@
       <div class="card-footer">
         <%= render "devise/shared/links" %>
       </div>
-
-    </div>
 
   </div>
 </div>

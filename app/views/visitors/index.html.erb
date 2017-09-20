@@ -1,6 +1,6 @@
-<div class="bg- pt-3">
+<div id="produtos-bg">
 
-  <div class="container">
+  <div class="container pt-5">
 
     <% if !@produtos.empty? %>
 
@@ -50,15 +50,20 @@
 
       </div>
       <!--/.Carousel Wrapper-->
+    <% end %>
 
-    </div>
+  </div>
 
-  <% end %>
+</div>
 
-  <% if !@clientes.empty? %>
+<div id="clientes-bg">
+
+  <div class="container pt-5">
+
+    <% if !@clientes.empty? %>
 
       <!--Carousel Wrapper-->
-      <div id="multi-item-example" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
+      <div id="multi-item-clientes" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
 
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
@@ -71,34 +76,23 @@
 
                 <% itens.each do |item| %>
                   <div class="col-md-4 clearfix d-none d-md-block">
-                      <div class="card bg-light">
-                        
-                          
-                        </div>
-                        <div class="card-body">
-                          <%= link_to '#' do %>
-                            <%= image_tag item.logo.url, class: 'img-thumbnail img-fluid' %>
-                          <% end %>
-                        </div>
-                      </div>
+                      <%= link_to '#' do %>
+                        <%= image_tag item.logo.url(:standard), class: 'img-fluid' %>
+                      <% end %>
                   </div>
                 <% end %>
               </div>
             <% end %>
           </div>
 
-          <!--/.Slides-->
-          <!--Controls-->
           <div class="controls-top mt-3">
-              <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-              <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+              <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+              <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="next"><i class="fa fa-chevron-right"></i></a>
           </div>
-          <!--/.Controls-->
 
       </div>
-      <!--/.Carousel Wrapper-->
+    <% end %>
 
-    </div>
+  </div>
 
-  <% end %>
 </div>
