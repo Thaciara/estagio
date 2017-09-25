@@ -34,7 +34,7 @@
                   </td>
                   <td class="text-center"><%= link_to 'Detalhes', product %></td>
                   <td class="text-center"><%= link_to 'Editar', edit_product_path(product) %></td>
-                  <td class="text-center"><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+                  <td class="text-center"><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Tem certeza que deseja excluir esse produto?' } %></td>
                 </tr>
               <% end %>
             </tbody>

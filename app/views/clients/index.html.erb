@@ -30,7 +30,7 @@
                   <td class="text-center"><%= image_tag client.logo.url(:icon) %></td>
                   <td class="text-center"><%= link_to 'Detalhes', client %></td>
                   <td class="text-center"><%= link_to 'Editar', edit_client_path(client) %></td>
-                  <td class="text-center"><%= link_to 'Excluir', client, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+                  <td class="text-center"><%= link_to 'Excluir', client, method: :delete, data: { confirm: 'Tem certeza que deseja excluir esse cliente?' } %></td>
                 </tr>
               <% end %>
             </tbody>
