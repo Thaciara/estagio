@@ -51,14 +51,11 @@
       </div>
       <!--/.Carousel Wrapper-->
 
-    </div>
-
   <% end %>
 
   <% if !@clientes.empty? %>
-
       <!--Carousel Wrapper-->
-      <div id="multi-item-example" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
+      <div id="multi-item-clientes" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
 
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
@@ -71,16 +68,11 @@
 
                 <% itens.each do |item| %>
                   <div class="col-md-4 clearfix d-none d-md-block">
-                      <div class="card bg-light">
-                        
-                          
-                        </div>
-                        <div class="card-body">
-                          <%= link_to '#' do %>
-                            <%= image_tag item.logo.url, class: 'img-thumbnail img-fluid' %>
-                          <% end %>
-                        </div>
-                      </div>
+                    <div class="card bg-light"></div>
+
+                    <div class="card-body">
+                      <%= image_tag item.logo.url, class: 'img-thumbnail img-fluid' %>
+                    </div>
                   </div>
                 <% end %>
               </div>
@@ -89,16 +81,16 @@
 
           <!--/.Slides-->
           <!--Controls-->
-          <div class="controls-top mt-3">
-              <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-              <a class="btn-floating bg-dark" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+          <div class="controls-top mt-3 text-center">
+              <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+              <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="next"><i class="fa fa-chevron-right"></i></a>
           </div>
           <!--/.Controls-->
 
       </div>
       <!--/.Carousel Wrapper-->
 
-    </div>
-
   <% end %>
+
+  </div>
 </div>
