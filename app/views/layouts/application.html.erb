@@ -21,10 +21,12 @@
 
     <main role="main" class="<%= main_class %>">
        <div class="container">
-         <% unless current_page?(root_url) %>
-           <div class="alert alert-secundary border border-dark" role="alert">
-             <%= render_breadcrumbs :separator => ' / ' %>
-           </div>
+         <% if user_signed_in? %>
+           <% unless current_page?(root_url) %>
+             <div class="alert alert-secundary border border-dark" role="alert">
+               <%= render_breadcrumbs :separator => ' / ' %>
+             </div>
+           <% end %>
          <% end %>
          <%= render 'layouts/messages' %>
        </div>

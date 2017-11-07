@@ -1,8 +1,8 @@
-<div class="bg- pt-3">
+<div class="bg pt-3">
 
-  <div class="container">
+  <% if !@produtos.empty? %>
 
-    <% if !@produtos.empty? %>
+    <div class="container">
 
       <!--Carousel Wrapper-->
       <div id="multi-item-example" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
@@ -49,46 +49,54 @@
           <!--/.Controls-->
 
       </div>
-      <!--/.Carousel Wrapper-->
+    </div>
 
   <% end %>
 
   <% if !@clientes.empty? %>
-      <!--Carousel Wrapper-->
-      <div id="multi-item-clientes" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
 
-          <!--Slides-->
-          <div class="carousel-inner" role="listbox">
+    <div class="row-fluid bg-dark">
+      <div class="container">
 
-            <% active_class = 'active' %>
-            <% @clientes.in_groups_of(3, false).each do |itens| %>
+        <h4 class="alert text-white">Nossos clientes</h4>
 
-              <div class="carousel-item <%= active_class %>">
-                <% active_class = '' %>
+          <!--Carousel Wrapper-->
+          <div id="multi-item-clientes" class="carousel slide carousel-multi-item text-center" data-ride="carousel">
 
-                <% itens.each do |item| %>
-                  <div class="col-md-4 clearfix d-none d-md-block">
-                    <div class="card bg-light"></div>
+              <!--Slides-->
+              <div class="carousel-inner" role="listbox">
 
-                    <div class="card-body">
-                      <%= image_tag item.logo.url, class: 'img-thumbnail img-fluid' %>
-                    </div>
+                <% active_class = 'active' %>
+                <% @clientes.in_groups_of(3, false).each do |itens| %>
+
+                  <div class="carousel-item <%= active_class %>">
+                    <% active_class = '' %>
+
+                    <% itens.each do |item| %>
+                      <div class="col-md-4 clearfix d-none d-md-block">
+                        <!-- <div class="card bg-light"></div> -->
+
+                        <div class="card-body">
+                          <%= image_tag item.logo.url, class: 'img-thumbnail img-fluid' %>
+                        </div>
+                      </div>
+                    <% end %>
                   </div>
                 <% end %>
               </div>
-            <% end %>
-          </div>
 
-          <!--/.Slides-->
-          <!--Controls-->
-          <div class="controls-top mt-3 text-center">
-              <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-              <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-          </div>
-          <!--/.Controls-->
+              <!--/.Slides-->
+              <!--Controls-->
+              <div class="controls-top mt-3 text-center">
+                  <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                  <a class="btn-floating bg-dark" href="#multi-item-clientes" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+              </div>
+              <!--/.Controls-->
 
+          </div>
+          <!--/.Carousel Wrapper-->
       </div>
-      <!--/.Carousel Wrapper-->
+    </div>
 
   <% end %>
 
