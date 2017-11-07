@@ -1,6 +1,12 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
+  before_action :is_admin?, except: [:show]
+
+  add_breadcrumb "Clientes", :clients_path
+  add_breadcrumb "<i class='fa fa-plus'></i> Novo".html_safe, :new_client_path, only: [:index, :new]
+
+
   # GET /clients
   # GET /clients.json
   def index
@@ -70,5 +76,9 @@ class ClientsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
       params.require(:client).permit(:name, :logo)
+    end
+
+    def is_admin?
+      redirect_to root_path, alert: "Você não tem permissão para executar o recurso solicitado!" unless current_user.try(:admin?)
     end
 end

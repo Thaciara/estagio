@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show]
+  before_action :is_admin?, except: [:show]
 
   add_breadcrumb "Produtos", :products_path
   add_breadcrumb "<i class='fa fa-plus'></i> Novo".html_safe, :new_product_path, only: [:index, :new]
-
-  before_action :authenticate_user!, except: [:show]
 
   # GET /products
   # GET /products.json
@@ -82,5 +82,9 @@ class ProductsController < ApplicationController
 
     def filtering_params(params)
       params.slice(:name)
+    end
+
+    def is_admin?
+      redirect_to root_path, alert: "Você não tem permissão para executar o recurso solicitado!" unless current_user.try(:admin?)
     end
 end
