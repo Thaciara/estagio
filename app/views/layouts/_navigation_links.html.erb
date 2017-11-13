@@ -6,8 +6,11 @@
 
 <% if user_signed_in? %>
 
-	<li class='nav-item'><%= link_to 'Produtos', products_path, class: 'nav-link text-white bg-dark' %></li>
-	<li class='nav-item'><%= link_to 'Clientes', clients_path, class: 'nav-link  text-white bg-dark' %></li>
+	<% if current_user.try(:admin?) %>
+		<li class='nav-item'><%= link_to 'Produtos', products_path, class: 'nav-link text-white bg-dark' %></li>
+		<li class='nav-item'><%= link_to 'Clientes', clients_path, class: 'nav-link  text-white bg-dark' %></li>
+	<% end %>
+
 	<li class='nav-item'><%= link_to('Minha Conta', edit_user_registration_path, class: 'nav-link') %></li>
   <li class='nav-item'><%= link_to('Sair', destroy_user_session_path, method: :delete, class: 'nav-link') %></li>
 
